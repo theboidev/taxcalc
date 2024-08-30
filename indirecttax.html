@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indirect Taxes Explained</title>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card h2 {
+    color: #4CAF50;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #4CAF50;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.3s ease;
+}
+
+.card:hover::after {
+    width: 10px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: fadeInUp 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>Understanding Indirect Taxes</h1>
+        <p>A comprehensive guide to the taxes levied on goods and services in various forms.</p>
+    </header>
+    
+    <section class="card-container">
+        <div class="card" id="gst">
+            <h2>Goods and Services Tax (GST)</h2>
+            <p>GST is a value-added tax levied on most goods and services sold for domestic consumption. While consumers pay the GST, businesses selling the goods and services are responsible for remitting it to the government.</p>
+            <p><strong>Importance:</strong> GST simplifies the tax structure by combining various indirect taxes into one, making it easier for businesses to comply and for governments to collect revenue.</p>
+        </div>
+
+        <div class="card" id="vat">
+            <h2>Value-Added Tax (VAT)</h2>
+            <p>VAT is a tax levied on the value added to goods and services at each stage of production or distribution. Unlike GST, which is typically applied at a national level, VAT may vary by region.</p>
+            <p><strong>Key Point:</strong> VAT is collected at multiple stages of production, ensuring that every step in the supply chain contributes to the tax revenue.</p>
+        </div>
+
+        <div class="card" id="sales-tax">
+            <h2>Sales Tax</h2>
+            <p>Sales Tax is a tax on sales or receipts from sales. It is usually added to the price of goods and services at the point of sale, with consumers bearing the cost directly.</p>
+            <p><strong>Tip:</strong> Understanding the sales tax rate in your area can help you make informed purchasing decisions and manage your budget effectively.</p>
+        </div>
+
+        <div class="card" id="excise-duty">
+            <h2>Excise Duty</h2>
+            <p>Excise Duty is a tax on the manufacture of goods within a country. It is usually applied to specific goods like alcohol, tobacco, and fuel, often to discourage consumption or raise additional revenue for the government.</p>
+            <p><strong>Insight:</strong> Excise duties can significantly impact the final price of goods, particularly those considered harmful to health or the environment.</p>
+        </div>
+
+        <div class="card" id="customs-duty">
+            <h2>Customs Duty</h2>
+            <p>Customs Duty is a tax imposed on imports and exports of goods. It is used to regulate international trade, protect domestic industries, and generate revenue for the government.</p>
+            <p><strong>Note:</strong> Understanding customs duty is essential for businesses involved in importing or exporting goods, as it can affect pricing and competitiveness in the global market.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Indirect Taxes Guide</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

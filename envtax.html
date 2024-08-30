@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Taxes Explained</title>
+<style>body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card h2 {
+    color: #3f51b5;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #3f51b5;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.3s ease;
+}
+
+.card:hover::after {
+    width: 10px;
+}
+
+footer {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: fadeInUp 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>Understanding Environmental Taxes</h1>
+        <p>A comprehensive guide to taxes aimed at protecting the environment and promoting sustainability.</p>
+    </header>
+    
+    <section class="card-container">
+        <div class="card" id="carbon-tax">
+            <h2>Carbon Tax</h2>
+            <p>A Carbon Tax is imposed on carbon emissions, specifically targeting the use of fossil fuels. The goal of this tax is to reduce greenhouse gas emissions, encourage the use of renewable energy, and mitigate the impacts of climate change.</p>
+            <p><strong>Importance:</strong> By making carbon-intensive activities more expensive, a Carbon Tax incentivizes individuals and businesses to adopt cleaner, more sustainable practices.</p>
+        </div>
+
+        <div class="card" id="green-tax">
+            <h2>Green Tax</h2>
+            <p>Green Tax is levied on activities or products that are harmful to the environment, such as the production of plastic or industrial pollution. This tax is designed to discourage environmentally damaging practices and fund environmental conservation efforts.</p>
+            <p><strong>Key Point:</strong> Green taxes are an essential tool for governments to enforce environmental responsibility and promote eco-friendly alternatives.</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

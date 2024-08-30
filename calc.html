@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accurate India Salary Tax Calculator 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .calculator {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .calculator input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #218838;
+        }
+        .results {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tax Calculator 2024</h1>
+
+    <div class="calculator">
+        <label for="gross-salary">Gross Salary Income (INR):</label>
+        <input type="number" id="gross-salary" placeholder="e.g. 1200000">
+
+        <label for="income-other">Annual Income from Other Sources (INR):</label>
+        <input type="number" id="income-other" placeholder="e.g. 0">
+
+        <label for="income-interest">Annual Income from Interest (INR):</label>
+        <input type="number" id="income-interest" placeholder="e.g. 0">
+
+        <label for="rental-income">Annual Income from Let-Out House Property (Rental Income) (INR):</label>
+        <input type="number" id="rental-income" placeholder="e.g. 0">
+
+        <label for="home-loan-self">Annual Interest Paid on Home Loan (Self-Occupied) (INR):</label>
+        <input type="number" id="home-loan-self" placeholder="e.g. 0">
+
+        <label for="home-loan-let-out">Annual Interest Paid on Home Loan (Let-Out) (INR):</label>
+        <input type="number" id="home-loan-let-out" placeholder="e.g. 0">
+
+        <button onclick="calculateTax()">Calculate Tax</button>
+
+        <div class="results">
+            <p id="annual-tax"></p>
+            <p id="monthly-tax"></p>
+        </div>
+    </div>
+
+    <script>
+        function calculateTax() {
+            const grossSalary = parseFloat(document.getElementById('gross-salary').value) || 0;
+            const incomeOther = parseFloat(document.getElementById('income-other').value) || 0;
+            const incomeInterest = parseFloat(document.getElementById('income-interest').value) || 0;
+            const rentalIncome = parseFloat(document.getElementById('rental-income').value) || 0;
+            const homeLoanSelf = parseFloat(document.getElementById('home-loan-self').value) || 0;
+            const homeLoanLetOut = parseFloat(document.getElementById('home-loan-let-out').value) || 0;
+
+            let totalIncome = grossSalary + incomeOther + incomeInterest + rentalIncome;
+            let deductions = homeLoanSelf + homeLoanLetOut;
+            let netTaxableIncome = totalIncome - deductions;
+
+            let annualTax = 0;
+
+            // Old Regime Tax Calculation with Slabs
+            if (netTaxableIncome <= 250000) {
+                annualTax = 0;
+            } else if (netTaxableIncome <= 500000) {
+                annualTax = (netTaxableIncome - 250000) * 0.05;
+            } else if (netTaxableIncome <= 1000000) {
+                annualTax = 12500 + (netTaxableIncome - 500000) * 0.2;
+            } else {
+                annualTax = 112500 + (netTaxableIncome - 1000000) * 0.3;
+            }
+
+            // Rebate under Section 87A for income less than or equal to 5 lakh
+            if (netTaxableIncome <= 500000) {
+                annualTax = Math.max(annualTax - 12500, 0);
+            }
+
+            // Add Cess (4% on tax)
+            const cess = annualTax * 0.04;
+            annualTax += cess;
+
+            const monthlyTax = annualTax / 12;
+
+            document.getElementById('annual-tax').innerText = `Annual Tax: ₹${annualTax.toFixed(2)}`;
+            document.getElementById('monthly-tax').innerText = `Monthly Tax: ₹${monthlyTax.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>

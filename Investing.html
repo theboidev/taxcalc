@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Your Money</title>
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    background-color: #2d5f8b;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #fff;
+    color: #2d5f8b;
+    border-radius: 4px;
+}
+
+.hero {
+    background-color: #2d5f8b;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    background-image: linear-gradient(135deg, #2d5f8b 0%, #538bb4 100%);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.options {
+    padding: 2rem 0;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2d5f8b;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+</head>
+<body>
+   
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Maximize Your Wealth with Smart Investments</h1>
+            <p>Explore the best ways to grow your money and secure your financial future.</p>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Grow Your Money</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+              </ul>
+        </div>
+    </nav>
+
+    <section id="options" class="options">
+        <div class="container">
+            <h2>Best Investment Options</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Systematic Investment Plans (SIPs)</h3>
+                    <p><strong>Benefit:</strong> Regular, disciplined investing in mutual funds.</p>
+                    <p><strong>Risk Level:</strong> Moderate</p>
+                    <p><strong>Potential Returns:</strong> 8% - 15% annually</p>
+                </div>
+                <div class="card">
+                    <h3>Mutual Funds</h3>
+                    <p><strong>Benefit:</strong> Diversified portfolio managed by experts.</p>
+                    <p><strong>Risk Level:</strong> Varies (Low to High)</p>
+                    <p><strong>Potential Returns:</strong> 7% - 20% annually</p>
+                </div>
+                <div class="card">
+                    <h3>Stocks</h3>
+                    <p><strong>Benefit:</strong> Ownership in companies with high growth potential.</p>
+                    <p><strong>Risk Level:</strong> High</p>
+                    <p><strong>Potential Returns:</strong> 10% - 30% annually</p>
+                </div>
+                <div class="card">
+                    <h3>Fixed Deposits (FDs)</h3>
+                    <p><strong>Benefit:</strong> Safe, guaranteed returns.</p>
+                    <p><strong>Risk Level:</strong> Low</p>
+                    <p><strong>Potential Returns:</strong> 5% - 7% annually</p>
+                </div>
+                <div class="card">
+                    <h3>Real Estate</h3>
+                    <p><strong>Benefit:</strong> Tangible asset with potential for long-term appreciation.</p>
+                    <p><strong>Risk Level:</strong> Medium</p>
+                    <p><strong>Potential Returns:</strong> 8% - 12% annually</p>
+                </div>
+                <div class="card">
+                    <h3>Gold</h3>
+                    <p><strong>Benefit:</strong> Hedge against inflation, historically stable investment.</p>
+                    <p><strong>Risk Level:</strong> Low to Medium</p>
+                    <p><strong>Potential Returns:</strong> 6% - 10% annually</p>
+                </div>
+                <div class="card">
+                    <h3>Public Provident Fund (PPF)</h3>
+                    <p><strong>Benefit:</strong> Government-backed, tax-free returns.</p>
+                    <p><strong>Risk Level:</strong> Low</p>
+                    <p><strong>Potential Returns:</strong> 7% - 8% annually</p>
+                </div>
+                <div class="card">
+                    <h3>National Pension Scheme (NPS)</h3>
+                    <p><strong>Benefit:</strong> Retirement-focused, tax benefits under Section 80CCD.</p>
+                    <p><strong>Risk Level:</strong> Moderate</p>
+                    <p><strong>Potential Returns:</strong> 8% - 10% annually</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

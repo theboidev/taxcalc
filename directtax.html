@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Taxes Explained</title>
+<style>body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card h2 {
+    color: #4CAF50;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #4CAF50;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.3s ease;
+}
+
+.card:hover::after {
+    width: 10px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: fadeInUp 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>Understanding Direct Taxes</h1>
+        <p>Your comprehensive guide to the essential taxes everyone should know about.</p>
+    </header>
+    
+    <section class="card-container">
+        <div class="card" id="income-tax">
+            <h2>Income Tax</h2>
+            <p>Income Tax is a levy imposed on the financial income of individuals, corporations, or legal entities. This tax is progressive, meaning those who earn more pay a higher rate. It is crucial as it funds various government services and infrastructure projects.</p>
+            <p><strong>Why it matters:</strong> Understanding your income tax obligations can help you manage your finances better and ensure you’re not paying more than necessary.</p>
+        </div>
+
+        <div class="card" id="corporate-tax">
+            <h2>Corporate Tax</h2>
+            <p>Corporate Tax is imposed on the profit of a corporation. These taxes are crucial as they ensure that companies contribute to the economy based on their profitability. Corporate tax rates and regulations vary significantly across different jurisdictions.</p>
+            <p><strong>Key Point:</strong> Knowing the corporate tax rate can help businesses plan their strategies and investments effectively.</p>
+        </div>
+
+        <div class="card" id="wealth-tax">
+            <h2>Wealth Tax</h2>
+            <p>Wealth Tax is levied on the net worth of individuals. It applies to the market value of assets owned by an individual minus their liabilities. This tax is typically aimed at reducing inequality and raising revenue from the wealthy.</p>
+            <p><strong>Insight:</strong> Calculating wealth tax accurately can prevent unexpected financial liabilities and ensure compliance with the law.</p>
+        </div>
+
+        <div class="card" id="property-tax">
+            <h2>Property Tax</h2>
+            <p>Property Tax is a levy on real estate, including land and buildings. The amount is usually determined by the value of the property. This tax is a significant revenue source for local governments and is used to fund public services like schools, roads, and emergency services.</p>
+            <p><strong>Tip:</strong> Regularly reviewing your property’s assessed value can help you manage your tax obligations better.</p>
+        </div>
+
+        <div class="card" id="estate-tax">
+            <h2>Estate Tax</h2>
+            <p>Estate Tax is levied on the total value of money and property owned by an individual at the time of their death before it is distributed to heirs. This tax ensures that large estates contribute to public revenue.</p>
+            <p><strong>Note:</strong> Proper estate planning can help minimize the tax burden on your heirs and ensure your assets are distributed according to your wishes.</p>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
