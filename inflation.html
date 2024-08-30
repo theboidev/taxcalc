@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inflation Calculator</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  #calculator { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+  label { display: block; margin-top: 10px; }
+  input { width: 100%; padding: 8px; margin-top: 5px; }
+  button { margin-top: 20px; padding: 10px; width: 100%; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  button:hover { background-color: #45a049; }
+  .result { margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<div id="calculator">
+  <label for="currentCost">Current Cost:</label>
+  <input type="number" id="currentCost" value="100000"><br>
+
+  <label for="inflationRate">Rate of Inflation (p.a):</label>
+  <input type="number" id="inflationRate" value="6"><br>
+
+  <label for="timePeriod">Time Period (years):</label>
+  <input type="number" id="timePeriod" value="5"><br>
+
+  <button onclick="calculateInflation()">Calculate</button><br>
+
+  <div class="result">Cost Increase: <span id="costIncrease"></span></div>
+  <div class="result">Future Cost: <span id="futureCost"></span></div>
+</div>
+
+<script>
+function calculateInflation() {
+  var currentCost = parseFloat(document.getElementById('currentCost').value);
+  var rate = parseFloat(document.getElementById('inflationRate').value);
+  var time = parseFloat(document.getElementById('timePeriod').value);
+
+  var futureValue = currentCost * Math.pow((1 + rate / 100), time);
+  var costIncrease = futureValue - currentCost;
+
+  document.getElementById('costIncrease').textContent = costIncrease.toFixed(2);
+  document.getElementById('futureCost').textContent = futureValue.toFixed(2);
+}
+</script>
+
+</body>
+</html>
